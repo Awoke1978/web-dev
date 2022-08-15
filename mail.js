@@ -26,11 +26,24 @@ function submitform(e){
     var country = getElementVal('country');
     var phone = getElementVal('phone number');
 
-    console.log(fname,lname,age,gender,city,country,phone);
+    savemessages(fname,lname,age,gender,city,country,phone)
 
+};
 
-}
+const savemessages = (fname,lname,age,gender,city,country,phone) => {
+    var newiqubeform = iqube_formsdb.push();
+
+    newiqubeform.set({
+        fname : fname,
+        lname : lname,
+        age : age,
+        gender : gender,
+        city : city,
+        country : country,
+        phone : phone,
+    });
+};
 
 function getElementVal(id) {
     return document.getElementById(id).value;
-}
+};

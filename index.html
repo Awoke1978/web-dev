@@ -1,41 +1,53 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+    <head>
 
+        <meta charset="UTF-8">
+        <title>iqube-forms | using firebase</title>
 
-<div>
+    </head>
 
-    <h1>Personal Details form</h1>
-    <p>Please enter your details below</p><br>
+    <body>
 
-    <form action="/action_page.php">
 
         <div>
 
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" placeholder="first name" required><br>
+            <h1>Personal Details form</h1>
+            <p>Please enter your details below</p><br>
 
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" placeholder="last name"required><br>
+            <div class="container">
+            <form action="/action_page.php" id="contactform">
 
-            <label for="age">Age:</label><br>
-            <input type="text" id="age" name="age" placeholder="age"required maxlength="3"><br>
-            
-            <label for="gender">Gender:</label><br>
-            <input type="text" id="gender" name="gender" placeholder="male or female"required><br>
+                
 
-            <label for="city">City:</label><br>
-            <input type="text" id="city" name="city" placeholder="city"required value="Coimbatore"><br>
+                    <label for="fname">First name:</label><br>
+                    <div class="inputbox"><input type="text" id="fname" name="fname" placeholder="first name" required><br></div>
 
-            <label for="country">Country:</label><br>
-            <input type="text" id="country" name="country" placeholder="country"required value="India"><br>
+                    <label for="lname">Last name:</label><br>
+                    <div class="inputbox"><input type="text" id="lname" name="lname" placeholder="last name"required><br></div>
 
-            <label for="phone number">Phone Number:</label><br>
-            <input type="text" id="phone number" name="phone number" placeholder="phone number"required maxlength="10"><br><br>
+                    <label for="age">Age:</label><br>
+                    <div class="inputbox"><input type="text" id="age" name="age" placeholder="age"required maxlength="3"><br></div>
+                    
+                    <label for="gender">Gender:</label><br>
+                    <div class="inputbox"><input type="text" id="gender" name="gender" placeholder="male or female"required><br></div>
+
+                    <label for="city">City:</label><br>
+                    <div class="inputbox"><input type="text" id="city" name="city" placeholder="city"required value="Coimbatore"><br></div>
+
+                    <label for="country">Country:</label><br>
+                    <div class="inputbox"><input type="text" id="country" name="country" placeholder="country"required value="India"><br></div>
+
+                    <label for="phone number">Phone Number:</label><br>
+                    <div class="inputbox"><input type="text" id="phone number" name="phone number" placeholder="phone number"required maxlength="10"><br><br></div>
+                
+                    <div class="inputbox"><input type="submit" value="Submit"></div>
+            </form>
+            </div>
         </div>
-        <input type="submit" value="Submit">
-    </form>
-</div>
 
-</body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+        <script src="./mail.js"></script>
+
+    </body>
 </html>
